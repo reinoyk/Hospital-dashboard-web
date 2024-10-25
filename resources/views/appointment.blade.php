@@ -85,6 +85,9 @@
             <h2 class="appointment_taital">Your <span style="color: #0cb7d6;">Appointments</span></h2>
         </div>
 
+        <!-- Clear the floats before the rating section starts -->
+        <div class="clearfix"></div>
+        
         <!-- Success message after appointment booking -->
         @if (session('success'))
             <div class="col-md-12">

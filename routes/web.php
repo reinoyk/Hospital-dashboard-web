@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\RatingController;
 
 // Home Page
 Route::get('/', function () {
@@ -23,17 +25,15 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-// Doctors Page
-Route::get('/doctors', function () {
-    return view('doctors');
-});
+// Doctors Page - Fetch doctors and their reviews from the controller
+Route::get('/doctors', [DoctorController::class, 'index'])->name('doctors.index');
 
 // Treatment Page
 Route::get('/treatment', function () {
     return view('treatment');
 });
 
-Route::post('/rate-doctor/{doctor}', [DoctorController::class, 'rate']);
+Route::post('/rate', [RatingController::class, 'storeRating'])->name('rating.store');
 
 Route::middleware([
     'auth:sanctum',
@@ -52,9 +52,11 @@ Route::middleware([
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/appointment', [AppointmentController::class, 'index'])->name('appointments.index');
+    Route::get('/appointments/create', [AppointmentController::class, 'create'])->name('appointments.create');
     Route::post('/appointment', [AppointmentController::class, 'store'])->name('appointments.store');
     Route::delete('/appointment/{id}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
 });
 
-
+// Route for submitting a rating
+Route::middleware(['auth'])->post('/doctors', [DoctorController::class, 'storeReview'])->name('rating.store');
 
