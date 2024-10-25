@@ -15,4 +15,14 @@ class Doctor extends Model
     {
         return $this->belongsTo(Department::class);
     }
+
+    public function ratings()
+    {
+        return $this->hasMany(DoctorRating::class);
+    }
+
+    public function averageRating()
+    {
+        return $this->ratings()->avg('rating');
+    }
 }
