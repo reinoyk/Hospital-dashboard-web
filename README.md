@@ -1,51 +1,104 @@
-# Hospital Dashboard Web
+<div id="top">
 
-A web-based application built with Laravel, designed to provide a comprehensive dashboard for hospital management. This project aims to help hospital administrators and staff monitor key metrics, manage resources, and improve patient care through data visualization and analytics.
+<!-- HEADER STYLE: CLASSIC -->
+<div align="center">
 
-## About The Project
+# HOSPITAL-DASHBOARD-WEB
 
-This project is a web application that serves as a centralized dashboard for hospital operations. It is built using the Laravel PHP framework to offer real-time insights and a user-friendly interface for managing various aspects of a hospital.
+<em>Transforming Healthcare Operations with Real-Time Insights</em>
 
-*(In this section, you should add more details about what your project does. For example: What problems does it solve? What are its main goals?)*
+<!-- BADGES -->
+<img src="https://img.shields.io/github/last-commit/reinoyk/Hospital-dashboard-web?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+<img src="https://img.shields.io/github/languages/top/reinoyk/Hospital-dashboard-web?style=flat&color=0080ff" alt="repo-top-language">
+<img src="https://img.shields.io/github/languages/count/reinoyk/Hospital-dashboard-web?style=flat&color=0080ff" alt="repo-language-count">
 
-### Key Features
+<em>Built with the tools and technologies:</em><br>
 
-* **Real-time Data Visualization:** Tracks key hospital metrics.
-* **Patient Management Overview:** (Describe what it shows, e.g., admissions, discharges, patient flow)
-* **Resource Monitoring:** (Describe what it tracks, e.g., bed availability, staff allocation, equipment usage)
-* **Reporting & Analytics:** (Describe what kind of reports or analytics it provides)
-* **Secure User Authentication & Authorization:** (Leveraging Laravel's built-in features)
-* **(Add other features specific to your project)**
+<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
+<img src="https://img.shields.io/badge/Markdown-000000.svg?style=flat&logo=Markdown&logoColor=white" alt="Markdown">
+<img src="https://img.shields.io/badge/npm-CB3837.svg?style=flat&logo=npm&logoColor=white" alt="npm">
+<img src="https://img.shields.io/badge/Autoprefixer-DD3735.svg?style=flat&logo=Autoprefixer&logoColor=white" alt="Autoprefixer">
+<img src="https://img.shields.io/badge/PostCSS-DD3A0A.svg?style=flat&logo=PostCSS&logoColor=white" alt="PostCSS">
+<img src="https://img.shields.io/badge/Composer-885630.svg?style=flat&logo=Composer&logoColor=white" alt="Composer"><br>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
+<img src="https://img.shields.io/badge/XML-005FAD.svg?style=flat&logo=XML&logoColor=white" alt="XML">
+<img src="https://img.shields.io/badge/PHP-777BB4.svg?style=flat&logo=PHP&logoColor=white" alt="PHP">
+<img src="https://img.shields.io/badge/Vite-646CFF.svg?style=flat&logo=Vite&logoColor=white" alt="Vite">
+<img src="https://img.shields.io/badge/Axios-5A29E4.svg?style=flat&logo=Axios&logoColor=white" alt="Axios">
 
-*(Be sure to elaborate on each feature or replace these examples with the actual features of your dashboard.)*
+</div>
+<br>
 
-### Built With
+---
 
-This section should list all the major frameworks, libraries, and tools that you have used to build your project.
+## Table of Contents
 
-* **[Laravel](https://laravel.com/)**
-* **[PHP](https://www.php.net/)**
-* **[Composer](https://getcomposer.org/)**
-* **(Example: MySQL/PostgreSQL/SQLite - specify your database)**
-* **(Example: Vue.js/React/Blade - specify your frontend templating/framework if any beyond Blade)**
-* **(Example: Chart.js/D3.js for visualizations)**
-* **(Add all other significant technologies used in your project)**
+- [Overview](#overview)
+- [About the Project](#about-the-project)
+- [Features](#key-features)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Testing](#testing)
+
+---
+
+## Overview
+
+**Hospital-dashboard-web** is a Laravel-based platform designed to streamline hospital operations through real-time data visualization and secure user access. It integrates modern frontend tools like Tailwind CSS and Vite to provide a modular and maintainable architecture.
+
+---
+
+## About the Project
+
+A web-based application designed to serve as a centralized dashboard for hospital administrators and staff. It aims to improve decision-making through up-to-date metrics and resource tracking, ultimately enhancing patient care.
+
+---
+
+## Key Features
+
+- 🧑‍⚕️ **Real-time Data Visualization** — Monitor critical hospital metrics.
+- 🛏️ **Patient Management Overview** — View admissions, discharges, and flow.
+- 🏥 **Resource Monitoring** — Track bed availability, staff, and equipment.
+- 📊 **Reporting & Analytics** — Generate actionable reports from operational data.
+- 🔐 **Secure Authentication** — Uses Laravel Fortify and Sanctum.
+- 🎨 **Modular UI** — Reusable Blade components for cleaner design.
+- ⚙️ **Flexible Configuration** — Manage storage, queues, and integrations.
+
+---
+
+## Built With
+
+- **[Laravel](https://laravel.com/)**
+- **[PHP](https://www.php.net/)**
+- **[Composer](https://getcomposer.org/)**
+- **[MySQL](https://www.mysql.com/)** or other supported DB
+- **[Blade](https://laravel.com/docs/blade)** for templating
+- **[Chart.js](https://www.chartjs.org/)** for visualizations
+- **[Tailwind CSS](https://tailwindcss.com/)**
+- **[Vite](https://vitejs.dev/)** for frontend asset bundling
+
+---
 
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps.
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-List any software or tools that need to be installed on a user's machine before they can run your project.
+Make sure you have:
 
-* **PHP** (Specify version, e.g., >= 8.1)
-* **Composer**
-* **Node.js & NPM** (If you are using Laravel Mix for frontend assets)
-* **A web server** (e.g., Apache, Nginx) or use `php artisan serve`
-* **A database server** (e.g., MySQL, PostgreSQL, SQLite)
+- PHP >= 8.1
+- Composer
+- Node.js & NPM
+- A Web Server (Apache/Nginx) or use `php artisan serve`
+- A Database Server (MySQL, PostgreSQL, etc.)
 
-You can typically install PHP, Composer, and your database using your system's package manager (like `apt` for Debian/Ubuntu, `yum` for CentOS/RHEL, `brew` for macOS).
+---
 
 ### Installation
 
@@ -103,7 +156,6 @@ You can typically install PHP, Composer, and your database using your system's p
     ```sh
     php artisan storage:link
     ```
-
 ### Running the Application
 
 1.  **Start the Laravel development server:**
